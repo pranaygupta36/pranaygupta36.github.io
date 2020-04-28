@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>scripts &mdash; Attendance System Using Face Recognition 1.0 documentation</title>
+  <title>utils module &mdash; Attendance System Using Face Recognition 1.0 documentation</title>
   
 
   
@@ -42,7 +42,7 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="next" title="client module" href="client.html" /> 
+    <link rel="prev" title="socket_server module" href="socket_server.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -56,7 +56,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> Attendance System Using Face Recognition
+            <a href="index.html" class="icon icon-home"> Attendance System Using Face Recognition
           
 
           
@@ -90,12 +90,12 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="client.html">client module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="get_face_vector.html">get_face_vector module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="recognize_face.html">recognize_face module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="socket_server.html">socket_server module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="utils.html">utils module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">utils module</a></li>
 </ul>
 
             
@@ -110,7 +110,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">Attendance System Using Face Recognition</a>
+          <a href="index.html">Attendance System Using Face Recognition</a>
         
       </nav>
 
@@ -139,15 +139,15 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#">Docs</a> &raquo;</li>
+      <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>scripts</li>
+      <li>utils module</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/index.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/utils.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -160,17 +160,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="scripts">
-<h1>scripts<a class="headerlink" href="#scripts" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="client.html">client module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get_face_vector.html">get_face_vector module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recognize_face.html">recognize_face module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="socket_server.html">socket_server module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="utils.html">utils module</a></li>
-</ul>
-</div>
+  <div class="section" id="module-utils">
+<span id="utils-module"></span><h1>utils module<a class="headerlink" href="#module-utils" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="utils.add_facevec_to_records">
+<code class="descclassname">utils.</code><code class="descname">add_facevec_to_records</code><span class="sig-paren">(</span><em>face_vector</em>, <em>fname</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils.html#add_facevec_to_records"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.add_facevec_to_records" title="Permalink to this definition">¶</a></dt>
+<dd><p>adds face vector to records
+:param face_vector: {np.ndarray} Roll number to be added
+:param fname: {str} file name with which the vector is saved
+:return: {none} when the function completes</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.add_student_to_attendance_sheet">
+<code class="descclassname">utils.</code><code class="descname">add_student_to_attendance_sheet</code><span class="sig-paren">(</span><em>roll_number</em>, <em>path='./attendance_sheet.csv'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils.html#add_student_to_attendance_sheet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.add_student_to_attendance_sheet" title="Permalink to this definition">¶</a></dt>
+<dd><p>adds students rol number to the attendance sheet
+:param roll_number: {int} Roll number to be added to the sheet
+:param path: {str} path to the attendance sheet
+:return: {none} when the function completes</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.enroll_student">
+<code class="descclassname">utils.</code><code class="descname">enroll_student</code><span class="sig-paren">(</span><em>roll_number</em>, <em>face_vector</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils.html#enroll_student"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.enroll_student" title="Permalink to this definition">¶</a></dt>
+<dd><p>enrolls a student
+:param roll_number: {str} Roll number to be enrolled
+:param face_vector: {np.ndarray} Face vector of the person to be enrolled
+:return: {none} when the function completes</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.mark_present">
+<code class="descclassname">utils.</code><code class="descname">mark_present</code><span class="sig-paren">(</span><em>roll_number</em>, <em>path='./attendance_sheet.csv'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils.html#mark_present"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.mark_present" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the attendance sheet for the day
+:param roll_number: {int} Roll number to be marked present
+:param path: {str} path to the attendance sheet
+:return: {none} when the function completes</p>
+</dd></dl>
+
 </div>
 
 
@@ -181,8 +208,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="client.html" class="btn btn-neutral float-right" title="client module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
+        <a href="socket_server.html" class="btn btn-neutral float-left" title="socket_server module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

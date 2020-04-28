@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>scripts &mdash; Attendance System Using Face Recognition 1.0 documentation</title>
+  <title>recognize_face module &mdash; Attendance System Using Face Recognition 1.0 documentation</title>
   
 
   
@@ -42,7 +42,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="next" title="client module" href="client.html" /> 
+    <link rel="next" title="socket_server module" href="socket_server.html" />
+    <link rel="prev" title="get_face_vector module" href="get_face_vector.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -56,7 +57,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> Attendance System Using Face Recognition
+            <a href="index.html" class="icon icon-home"> Attendance System Using Face Recognition
           
 
           
@@ -90,10 +91,10 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="client.html">client module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="get_face_vector.html">get_face_vector module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recognize_face.html">recognize_face module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">recognize_face module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="socket_server.html">socket_server module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">utils module</a></li>
 </ul>
@@ -110,7 +111,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">Attendance System Using Face Recognition</a>
+          <a href="index.html">Attendance System Using Face Recognition</a>
         
       </nav>
 
@@ -139,15 +140,15 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#">Docs</a> &raquo;</li>
+      <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>scripts</li>
+      <li>recognize_face module</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/index.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/recognize_face.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -160,17 +161,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="scripts">
-<h1>scripts<a class="headerlink" href="#scripts" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="client.html">client module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get_face_vector.html">get_face_vector module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recognize_face.html">recognize_face module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="socket_server.html">socket_server module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="utils.html">utils module</a></li>
-</ul>
-</div>
+  <div class="section" id="module-recognize_face">
+<span id="recognize-face-module"></span><h1>recognize_face module<a class="headerlink" href="#module-recognize_face" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="recognize_face.recognize_face">
+<code class="descclassname">recognize_face.</code><code class="descname">recognize_face</code><span class="sig-paren">(</span><em>face_vector</em>, <em>recognition_thresh</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/recognize_face.html#recognize_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#recognize_face.recognize_face" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads face vectors from the records, compares them with the input vector using l2 norm returns the rollnumber against the best match
+:param face_vector: {np.ndarray} The face vector which is to be matched.
+:param recognition_thresh: {float} The min threshold for l2 distance
+:return: {str} The matchde roll number or None</p>
+</dd></dl>
+
 </div>
 
 
@@ -181,8 +182,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="client.html" class="btn btn-neutral float-right" title="client module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="socket_server.html" class="btn btn-neutral float-right" title="socket_server module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
+      
+        <a href="get_face_vector.html" class="btn btn-neutral float-left" title="get_face_vector module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

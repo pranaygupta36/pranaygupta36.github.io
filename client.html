@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>scripts &mdash; Attendance System Using Face Recognition 1.0 documentation</title>
+  <title>client module &mdash; Attendance System Using Face Recognition 1.0 documentation</title>
   
 
   
@@ -42,7 +42,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="next" title="client module" href="client.html" /> 
+    <link rel="next" title="get_face_vector module" href="get_face_vector.html" />
+    <link rel="prev" title="scripts" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -56,7 +57,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> Attendance System Using Face Recognition
+            <a href="index.html" class="icon icon-home"> Attendance System Using Face Recognition
           
 
           
@@ -90,8 +91,8 @@
               
             
             
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="client.html">client module</a></li>
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">client module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="get_face_vector.html">get_face_vector module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="recognize_face.html">recognize_face module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="socket_server.html">socket_server module</a></li>
@@ -110,7 +111,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">Attendance System Using Face Recognition</a>
+          <a href="index.html">Attendance System Using Face Recognition</a>
         
       </nav>
 
@@ -139,15 +140,15 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#">Docs</a> &raquo;</li>
+      <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>scripts</li>
+      <li>client module</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/index.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/client.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -160,17 +161,45 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="scripts">
-<h1>scripts<a class="headerlink" href="#scripts" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="client.html">client module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get_face_vector.html">get_face_vector module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recognize_face.html">recognize_face module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="socket_server.html">socket_server module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="utils.html">utils module</a></li>
-</ul>
-</div>
+  <div class="section" id="module-client">
+<span id="client-module"></span><h1>client module<a class="headerlink" href="#module-client" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="client.Client">
+<em class="property">class </em><code class="descclassname">client.</code><code class="descname">Client</code><span class="sig-paren">(</span><em>server_ip</em>, <em>server_port</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/client.html#Client"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#client.Client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Client class for individual cameras</p>
+<dl class="method">
+<dt id="client.Client.close_connection">
+<code class="descname">close_connection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/client.html#Client.close_connection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#client.Client.close_connection" title="Permalink to this definition">¶</a></dt>
+<dd><p>ends the connection with the server
+:return: {str} confirmation/error messaage</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.recv_msg">
+<code class="descname">recv_msg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/client.html#Client.recv_msg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#client.Client.recv_msg" title="Permalink to this definition">¶</a></dt>
+<dd><p>receives a text msg from the server
+:return: {str} The recieved message or an error message</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.send_msg">
+<code class="descname">send_msg</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/client.html#Client.send_msg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#client.Client.send_msg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a text msg to the server
+:param msg: {str} the message that has to be sent
+:return: {str} confirmation/error message</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.send_vector">
+<code class="descname">send_vector</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/client.html#Client.send_vector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#client.Client.send_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>sends a vector to the server
+:param: {np.ndarray} The vector to be sent
+:return: {str} confirmation/error message</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 
@@ -181,8 +210,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="client.html" class="btn btn-neutral float-right" title="client module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="get_face_vector.html" class="btn btn-neutral float-right" title="get_face_vector module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="scripts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
