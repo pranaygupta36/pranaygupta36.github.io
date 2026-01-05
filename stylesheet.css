@@ -115,7 +115,8 @@ name {
 }
 
 .one {
-  width: 293px;
+  width: 100%;
+  max-width: 280px;
   height: auto;
   position: relative;
 }
@@ -123,14 +124,7 @@ name {
 .one img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-}
-
-.one img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .research-item {
