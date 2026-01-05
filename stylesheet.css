@@ -94,10 +94,19 @@ heading {
   font-size: 22px;
 }
 
+subheading {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
 papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 700
+  font-size: 15px;
+  font-weight: 700;
+  color: #1772d0;
+  line-height: 1.4;
 }
 
 name {
@@ -106,9 +115,66 @@ name {
 }
 
 .one {
-  width: 160px;
-  height: 160px;
+  width: 293px;
+  height: auto;
   position: relative;
+}
+
+.one img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.one img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.research-item {
+  padding: 24px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.research-item:last-child {
+  border-bottom: none;
+}
+
+details.abstract {
+  margin-top: 10px;
+}
+
+details.abstract summary {
+  cursor: pointer;
+  color: #1772d0;
+  font-weight: 600;
+  padding: 6px 12px;
+  background: #f5f5f5;
+  border-radius: 4px;
+  display: inline-block;
+  transition: background 0.2s ease;
+}
+
+details.abstract summary:hover {
+  background: #e8e8e8;
+  color: #f09228;
+}
+
+details.abstract p {
+  margin-top: 10px;
+  padding: 12px;
+  background: #fafafa;
+  border-left: 3px solid #1772d0;
+  border-radius: 0 4px 4px 0;
+}
+
+.service-logo {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.9;
 }
 
 .two {
